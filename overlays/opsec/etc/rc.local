@@ -1,0 +1,15 @@
+#!/bin/sh
+# OpSecOS - Auto-enable services on first boot
+
+if [ ! -f /var/lib/opsec-configured ]; then
+    ln -sf /etc/sv/dbus /var/service/
+    ln -sf /etc/sv/sddm /var/service/
+    ln -sf /etc/sv/NetworkManager /var/service/
+    ln -sf /etc/sv/bluetoothd /var/service/
+    mkdir -p /etc/pipewire/pipewire.conf.d
+    ln -s /usr/share/examples/wireplumber/10-wireplumber.conf /etc/pipewire/pipewire.conf.d/ 2>/dev/null || true
+    ln -s /usr/share/examples/pipewire/20-pipewire-pulse.conf /etc/pipewire/pipewire.conf.d/ 2>/dev/null || true
+    touch /var/lib/opsec-configured
+fi
+
+exit 0

@@ -1,0 +1,5 @@
+GRUB_TIMEOUT=67
+GRUB_DISTRIBUTOR="OpSec OS"
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+GRUB_DISABLE_OS_PROBER=false
+GRUB_BACKGROUND="/usr/share/void-artwork/splash.png"

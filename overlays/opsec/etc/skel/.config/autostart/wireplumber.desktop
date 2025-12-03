@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=WirePlumber
+Exec=/usr/bin/wireplumber
+X-KDE-autostart-phase=1

@@ -11,7 +11,7 @@ echo void-live > ${NEWROOT}/etc/hostname
 USERNAME=$(getarg live.user)
 USERSHELL=$(getarg live.shell)
 
-[ -z "$USERNAME" ] && USERNAME=anon
+[ -z "$USERNAME" ] && USERNAME=opsec
 [ -x $NEWROOT/bin/bash -a -z "$USERSHELL" ] && USERSHELL=/bin/bash
 [ -z "$USERSHELL" ] && USERSHELL=/bin/sh
 
@@ -28,8 +28,8 @@ chroot ${NEWROOT} useradd -m -c $USERNAME -G audio,video,wheel -s $USERSHELL $US
 chroot ${NEWROOT} passwd -d $USERNAME >/dev/null 2>&1
 
 # Setup default root/user password (voidlinux).
-chroot ${NEWROOT} sh -c 'echo "root:voidlinux" | chpasswd -c SHA512'
-chroot ${NEWROOT} sh -c "echo "$USERNAME:voidlinux" | chpasswd -c SHA512"
+chroot ${NEWROOT} sh -c 'echo "root:opsec" | chpasswd -c SHA512'
+chroot ${NEWROOT} sh -c "echo "$USERNAME:opsec" | chpasswd -c SHA512"
 
 # Enable sudo permission by default.
 if [ -f ${NEWROOT}/etc/sudoers ]; then

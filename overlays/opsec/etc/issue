@@ -1,0 +1,19 @@
+################################################################################
+
+Welcome to OpSec OS Live System
+
+Two users are available:
+    - root:opsec
+    - opsec:opsec
+
+To install OpSec OS to disk, type:
+
+sudo apt install opsec
+
+(https://files.catbox.moe/q3w1rw.png)
+
+For package management, use xbps-install/xbps-query (this distro is void-based)
+
+https://github.com/2x74
+
+################################################################################

@@ -1,0 +1,16 @@
+#!/bin/sh
+
+# Check if the command is "install opsec"
+if [ "$1" = "install" ] && [ "$2" = "opsec" ]; then
+    echo "Installing OpSec OS..."
+    if [ -x /usr/bin/void-installer ]; then
+        exec /usr/bin/void-installer
+    else
+        echo "Installer not found. Please run the installer manually."
+    fi
+else
+    echo "OpSec OS uses xbps package manager."
+    echo "Try: xbps-install <package>"
+    echo ""
+    echo "Or if you're a real one: sudo apt install opsec"
+fi

@@ -1,4 +1,5 @@
 #!/bin/bash
+export DIALOGRC=/etc/skel/.dialogrc
 #-
 # Copyright (c) 2012-2015 Juan Romero Pardines <xtraeme@gmail.com>.
 #               2012 Dave Elusive <davehome@redthumb.info.tm>.
@@ -97,7 +98,7 @@ WIDGET_SIZE="10 70"
 DIALOG() {
     rm -f $ANSWER
     dialog --colors --keep-tite --no-shadow --no-mouse \
-        --backtitle "${BOLD}${WHITE}Void Linux installation -- https://www.voidlinux.org (@@MKLIVE_VERSION@@)${RESET}" \
+        --backtitle "${BOLD}${WHITE}OpSec OS installation -- lunae.pw${RESET}" \
         --cancel-label "Back" --aspect 20 "$@" 2>$ANSWER
     return $?
 }
@@ -105,7 +106,7 @@ DIALOG() {
 INFOBOX() {
     # Note: dialog --infobox and --keep-tite don't work together
     dialog --colors --no-shadow --no-mouse \
-        --backtitle "${BOLD}${WHITE}Void Linux installation -- https://www.voidlinux.org (@@MKLIVE_VERSION@@)${RESET}" \
+        --backtitle "${BOLD}${WHITE}OpSec OS installation -- lunae.pw${RESET}" \
         --title "${TITLE}" --aspect 20 --infobox "$@"
 }
 
@@ -1234,7 +1235,7 @@ install_packages() {
         fi
     fi
 
-    _syspkg="base-system sddm kde5 xorg dbus NetworkManager"
+    _syspkg="base-system"
 
     mkdir -p $TARGETDIR/var/db/xbps/keys $TARGETDIR/usr/share
     cp -a /usr/share/xbps.d $TARGETDIR/usr/share/
@@ -1455,14 +1456,6 @@ ${BOLD}Do you want to continue?${RESET}" 20 80 || return
     # clean up polkit rule - it's only useful in live systems
     rm -f $TARGETDIR/etc/polkit-1/rules.d/void-live.rules
 
-    # Enable essential services for OpSecOS
-    echo "Enabling essential services..." >$LOG
-    enable_service dbus
-    enable_service sddm
-    enable_service NetworkManager
-    enable_service bluetoothd
-    echo "Services enabled successfully." >>$LOG
-
     # enable text console for grub if chosen
     if [ "$(get_option TEXTCONSOLE)" = "1" ]; then
         sed -i $TARGETDIR/etc/default/grub \
@@ -1475,12 +1468,6 @@ ${BOLD}Do you want to continue?${RESET}" 20 80 || return
 
     # menu for enabling services
     menu_services
-
-    # Enable essential OpSec OS services
-    INFOBOX "Enabling essential services..." 4 60
-    enable_service dbus
-    enable_service NetworkManager
-    enable_service sddm
 
     sync && sync && sync
 
@@ -1532,7 +1519,7 @@ menu() {
         AFTER_HOSTNAME="Timezone"
         DIALOG --default-item $DEFITEM \
             --extra-button --extra-label "Settings" \
-            --title " Void Linux installation menu " \
+            --title " OpSec OS installation menu " \
             --menu "$MENULABEL" 10 70 0 \
             "Keyboard" "Set system keyboard" \
             "Network" "Set up the network" \
@@ -1551,7 +1538,7 @@ menu() {
         AFTER_HOSTNAME="Locale"
         DIALOG --default-item $DEFITEM \
             --extra-button --extra-label "Settings" \
-            --title " Void Linux installation menu " \
+            --title " OpSec OS installation menu " \
             --menu "$MENULABEL" 10 70 0 \
             "Keyboard" "Set system keyboard" \
             "Network" "Set up the network" \
@@ -1614,11 +1601,11 @@ fi
 #
 DIALOG --title "${BOLD}${RED} Fsociety, I have infinite OpSec! ${RESET}" --msgbox "\n
 Welcome to the OpSec OS installation. A simple and minimal \
-Linux distribution that derives from Void Linux, and built from the source package tree \
+Linux distribution that derives from Void Linux (the first of its kind!), and built from the source package tree \
 available for XBPS, a new alternative binary package system.\n\n
 The installation should be pretty straightforward. If you are in trouble \
-please use the void linux documentation at ${BOLD}https://docs.voidlinux.org/${RESET}\n\n
-${BOLD}https://www.voidlinux.org${RESET}\n\n" 16 80
+you can go to ${BOLD}#voidlinux${RESET} on ${BOLD}irc.libera.chat${RESET}.\n\n
+${BOLD}https://github.com/2x74${RESET}\n\n" 16 80
 
 while true; do
     menu
@@ -1626,5 +1613,3 @@ done
 
 exit 0
 # vim: set ts=4 sw=4 et:
-
-sed -i 's|https://www.voidlinux.org|https://github.com/yourusername/opsec-os|g' /home/luna/void-mklive/installer.sh

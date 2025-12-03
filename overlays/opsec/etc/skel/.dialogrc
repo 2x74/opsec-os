@@ -1,0 +1,37 @@
+# Dark grey theme for dialog
+use_shadow = ON
+use_colors = ON
+
+# Screen background
+screen_color = (BLACK,BLACK,ON)
+
+# Dialog box
+dialog_color = (WHITE,BLACK,OFF)
+
+# Dialog box border
+border_color = (WHITE,BLACK,ON)
+
+# Title text
+title_color = (WHITE,BLACK,ON)
+
+# Button normal
+button_active_color = (BLACK,WHITE,ON)
+button_inactive_color = (WHITE,BLACK,OFF)
+button_key_active_color = (BLACK,WHITE,ON)
+button_key_inactive_color = (RED,BLACK,OFF)
+button_label_active_color = (BLACK,WHITE,ON)
+button_label_inactive_color = (WHITE,BLACK,ON)
+
+# Input box
+inputbox_color = (WHITE,BLACK,OFF)
+inputbox_border_color = (WHITE,BLACK,ON)
+
+# Menu/list items
+item_color = (WHITE,BLACK,OFF)
+item_selected_color = (BLACK,WHITE,ON)
+
+# Tag (left side of menu items)
+tag_color = (WHITE,BLACK,ON)
+tag_selected_color = (BLACK,WHITE,ON)
+tag_key_color = (RED,BLACK,OFF)
+tag_key_selected_color = (RED,WHITE,ON)

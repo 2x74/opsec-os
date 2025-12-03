@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Application
+Name=Set OpSecOS Wallpaper
+Exec=sh -c 'plasma-apply-wallpaperimage /usr/share/wallpapers/OpSecOS/contents/images/1920x1080.png && rm ~/.config/autostart/set-wallpaper.desktop'
+X-KDE-autostart-phase=2

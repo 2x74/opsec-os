@@ -1,0 +1,46 @@
+use_shadow = ON
+use_colors = ON
+
+# Dark grey/black background
+screen_color = (WHITE,BLACK,ON)
+shadow_color = (BLACK,BLACK,ON)
+
+# Dialog box - white text on dark grey
+dialog_color = (WHITE,BLACK,OFF)
+border_color = (WHITE,BLACK,ON)
+border2_color = (WHITE,BLACK,ON)
+
+# Title
+title_color = (YELLOW,BLACK,ON)
+
+# Buttons
+button_active_color = (BLACK,GREEN,ON)
+button_inactive_color = (WHITE,BLACK,OFF)
+button_key_active_color = (WHITE,GREEN,ON)
+button_key_inactive_color = (YELLOW,BLACK,OFF)
+button_label_active_color = (BLACK,GREEN,ON)
+button_label_inactive_color = (WHITE,BLACK,ON)
+
+# Menu items
+menubox_color = (WHITE,BLACK,OFF)
+menubox_border_color = (WHITE,BLACK,ON)
+item_color = (WHITE,BLACK,OFF)
+item_selected_color = (BLACK,GREEN,ON)
+
+# Tag/labels
+tag_color = (YELLOW,BLACK,ON)
+tag_selected_color = (BLACK,GREEN,ON)
+tag_key_color = (YELLOW,BLACK,ON)
+tag_key_selected_color = (BLACK,GREEN,ON)
+
+# Input boxes
+inputbox_color = (WHITE,BLACK,OFF)
+inputbox_border_color = (WHITE,BLACK,ON)
+
+# Search box
+searchbox_color = (WHITE,BLACK,OFF)
+searchbox_title_color = (YELLOW,BLACK,ON)
+searchbox_border_color = (WHITE,BLACK,ON)
+
+# Position line
+position_indicator_color = (YELLOW,BLACK,ON)
