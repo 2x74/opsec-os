@@ -3,7 +3,7 @@ Recently, laws like the Online ~~Safety~~ Surveilance Act in the UK have made it
 ## Features
 - Minimalist, fast distro built on runit (f*ck systemd)
 - Enough applications to stay private, but not enough to be bloated
-- Feature 3
+- It isn't arch (f*ck arch)
 
 ## Installation
 ```bash
