@@ -24,7 +24,7 @@ cd opsec-os
 # use the build-iso script, this builds the iso for you (this is good if you want to edit what packages are in the iso and whatnot)
 sudo ./build-iso.sh
 ```
-OR you just use the already built iso and either flash to a usb via either Balena Etcher, or with Ventoy.
+OR you just use the already built iso and flash to a usb via either Balena Etcher, or with Ventoy.
 
 ## Things used to make OpSec OS
 
