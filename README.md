@@ -3,8 +3,8 @@ Recently, laws like the Online ~~Safety~~ Surveilance Act in the UK have made it
 
 
 # DISCLAIMER !!!
-1. This project was made solely by me. All other contributors are to do with the void-mklive repo and should not be contacted if something goes wrong with OpSec OS
-1a. TLDR: I am the only person working on OpSec OS.
+1. This project was made solely by me. All other contributors are to do with the void-mklive repo and should not be contacted if something goes wrong with OpSec OS.
+TLDR: I am the only person working on OpSec OS.
 
 2. OpSec OS was made by a singular highschool student as a first project, there will be issues and bugs!! Please do not be harsh when giving criticism, I only accept constructive forms.
 
