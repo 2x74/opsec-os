@@ -37,7 +37,7 @@ Pull requests are welcome! For major changes, please open an issue first.
 
 ## License
 
-This project uses the MIT license. For more info, please go to https://github.com/2x74/opsec-os?tab=GPL-3.0-1-ov-file
+This project uses the GPL license. For more info, please go to https://github.com/2x74/opsec-os?tab=GPL-3.0-1-ov-file
 
 
 #
